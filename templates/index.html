@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AI 配電腦助手</title>
+  <style>
+    body {
+      margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #000;
+  font-family: "Microsoft JhengHei", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  /* 拿掉 align-items: center; */
+  align-items: flex-start;
+  overflow-y: auto; /* ✅ 可垂直滾動 */
+    }
+    body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #000;
+  font-family: "Microsoft JhengHei", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  /* 拿掉 align-items: center; */
+  align-items: flex-start;
+  overflow-y: auto; /* ✅ 可垂直滾動 */
+}
+    body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #000;
+  font-family: "Microsoft JhengHei", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  /* 拿掉 align-items: center; */
+  align-items: flex-start;
+  overflow-y: auto; /* ✅ 可垂直滾動 */
+}
+    body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #000;
+  font-family: "Microsoft JhengHei", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  /* 拿掉 align-items: center; */
+  align-items: flex-start;
+  overflow-y: auto; /* ✅ 可垂直滾動 */
+}
+    body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #000;
+  font-family: "Microsoft JhengHei", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  /* 拿掉 align-items: center; */
+  align-items: flex-start;
+  overflow-y: auto; /* ✅ 可垂直滾動 */
+}
+    body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #000;
+  font-family: "Microsoft JhengHei", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  /* 拿掉 align-items: center; */
+  align-items: flex-start;
+  overflow-y: auto; /* ✅ 可垂直滾動 */
+}
+    body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #000;
+  font-family: "Microsoft JhengHei", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  /* 拿掉 align-items: center; */
+  align-items: flex-start;
+  overflow-y: auto; /* ✅ 可垂直滾動 */
+}
+    body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #000;
+  font-family: "Microsoft JhengHei", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  /* 拿掉 align-items: center; */
+  align-items: flex-start;
+  overflow-y: auto; /* ✅ 可垂直滾動 */
+}
+    body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #000;
+  font-family: "Microsoft JhengHei", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  /* 拿掉 align-items: center; */
+  align-items: flex-start;
+  overflow-y: auto; /* ✅ 可垂直滾動 */
+}
+    body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #000;
+  font-family: "Microsoft JhengHei", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  /* 拿掉 align-items: center; */
+  align-items: flex-start;
+  overflow-y: auto; /* ✅ 可垂直滾動 */
+}
+    body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #000;
+  font-family: "Microsoft JhengHei", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  /* 拿掉 align-items: center; */
+  align-items: flex-start;
+  overflow-y: auto; /* ✅ 可垂直滾動 */
+}
+
+    .container {
+      background-color: #111;
+      border: 2px solid #444;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      text-align: center;
+      padding: 40px;
+      width: 85%;
+      max-width: 900px;  /* ← 原本600太窄，改900會寬很多 */
+    }
+
+    textarea {
+      width: 90%;
+      height: 80px;
+      resize: none;
+      border-radius: 10px;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #222;
+      color: #fff;
+    }
+
+    textarea:focus {
+      outline: none;
+      box-shadow: 0 0 8px #00bfff;
+    }
+
+    button {
+      margin-top: 15px;
+      background-color: #00bfff;
+      color: #fff;
+      border: none;
+      border-radius: 25px; /* 變橢圓 */
+      padding: 10px 40px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0099cc;
+      transform: scale(1.05);
+    }
+
+    .response-box {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #333;
+      background-color: #1a1a1a;
+      color: #ddd;
+      white-space: pre-wrap;
+      text-align: left;
+    }
+
+    .wifi-options {
+      margin-bottom: 15px;
+    }
+
+    .wifi-options label {
+      margin-right: 15px;
+    }
+
+    h2 {
+      color: #00bfff;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      color: #ffcc00;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🧠 AI 配電腦助手</h2>
+
+    <div class="wifi-options">
+      <label><input type="radio" name="wifi" value="need_wifi"> 需要 Wi-Fi</label>
+      <label><input type="radio" name="wifi" value="no_wifi"> 不需要 Wi-Fi</label>
+    </div>
+
+    <textarea id="msg" placeholder="請輸入你的預算和用途..."></textarea><br>
+    <button onclick="sendMessage()">送出需求</button>
+
+    <div id="ai-reply" class="response-box" style="display:none;"></div>
+    <div id="response" class="response-box" style="display:none;"></div>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const message = document.getElementById('msg').value;
+      const wifi = document.querySelector('input[name="wifi"]:checked')?.value || "any";
+
+      fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: message, wifi: wifi })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.ai_reply) {
+          document.getElementById('ai-reply').style.display = "block";
+          document.getElementById('ai-reply').innerHTML = 
+            "<h3>📊 AI 建議的預算比例：</h3>" + data.ai_reply.replace(/\n/g, "<br>");
+        }
+        if (data.reply) {
+          document.getElementById('response').style.display = "block";
+          document.getElementById('response').innerHTML = 
+            "<h3>💻 推薦組合：</h3>" + data.reply;
+        }
+      });
+    }
+  </script>
+</body>
+</html>
