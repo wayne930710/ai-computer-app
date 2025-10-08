@@ -18,7 +18,7 @@ def get_db():
         port=int(os.getenv("DB_PORT", 21857)),
         charset='utf8mb4',
         cursorclass=pymysql.cursors.DictCursor,
-        ssl={'ca': open(ca_path, 'rb').read(), 'check_hostname': False, 'check_crl': False}
+        ssl={'ca': ca_path, 'check_hostname': False, 'check_crl': False}
     )
 
 # def extract_budget(user_input):
