@@ -2,19 +2,23 @@ from flask import Flask, request, jsonify, render_template
 import pymysql
 import re
 import os
+import ssl
 from openai import OpenAI
 
 app = Flask(__name__)
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 #mysql的連線
 def get_db():
+    ca_path = os.path.join(os.path.dirname(__file__), 'ca.pem')
     return pymysql.connect(
-        host=os.getenv("DB_HOST", "localhost"),  # 預設 localhost
-        user=os.getenv("DB_USER", "root"),
-        password=os.getenv("DB_PASSWORD", "Aa101014073"),
-        database=os.getenv("DB_NAME", "ai_computer"),
+        host=os.getenv("DB_HOST"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+        database=os.getenv("DB_NAME"),
+        port=int(os.getenv("DB_PORT", 21857)),
         charset='utf8mb4',
-        cursorclass=pymysql.cursors.DictCursor
+        cursorclass=pymysql.cursors.DictCursor,
+        ssl={'ca': open(ca_path, 'rb').read(), 'check_hostname': False, 'check_crl': False}
     )
 
 # def extract_budget(user_input):
