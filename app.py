@@ -249,5 +249,6 @@ def chat():
 })
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    port = int(os.getenv("PORT", 5000))  # Render 會設定 PORT 變數為 10000
+    app.run(host='0.0.0.0', port=port, debug=True)
