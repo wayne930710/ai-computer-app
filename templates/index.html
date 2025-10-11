@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI 配電腦助手</title>
   <style>
     body {
@@ -220,6 +221,24 @@
     h3 {
       color: #ffcc00;
       margin-bottom: 5px;
+    }
+    /* --- Mobile-only adjustments (do not affect desktop) --- */
+    @media (max-width: 600px) {
+      html { font-size: 18px; }
+      /* make box-sizing predictable so padding won't cause overflow */
+      *, *::before, *::after { box-sizing: border-box; }
+      .container {
+        width: 95%;
+        padding: 20px;
+        border-radius: 12px;
+        box-sizing: border-box;
+      }
+      textarea { font-size: 1rem; height: 120px; width: 100%; max-width: 100%; padding: 14px; }
+      button { font-size: 1rem; padding: 12px 28px; border-radius: 20px; max-width: 100%; width: 100%; }
+      .response-box { font-size: 1rem; padding: 16px; }
+      .wifi-options label { display: inline-block; margin-right: 12px; font-size: 1rem; }
+      h2 { font-size: 1.3rem; }
+      h3 { font-size: 1.05rem; }
     }
   </style>
 </head>
